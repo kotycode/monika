@@ -24,8 +24,14 @@
 					<target>1.8</target>
 					<archive>
 						<manifest>
-							<mainClass>jeden.jeden.App</mainClass>
-						</manifest>
+                        <addClasspath>true</addClasspath>
+                        <!--<classpathPrefix>${pi.pi4j.Directory}/</classpathPrefix>-->
+                        <mainClass>${pi.main.class}</mainClass>
+                    </manifest>
+                    <manifestEntries>
+                        <!-- Add the pi4j in runtime. -->
+                        <Class-Path>${pi.pi4j.Directory}/pi4j-core.jar</Class-Path>
+                    </manifestEntries>
 					</archive>
 				</configuration>
 			</plugin>
@@ -39,12 +45,21 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.pi4j/pi4j-core -->
-		<dependency>
+		
+		<dependency> 
 			 <groupId>com.pi4j</groupId>
    			 <artifactId>pi4j-core</artifactId>
    			 <version>1.1</version>
 		</dependency>
+		
+		<dependency>
+    <groupId>com.pi4j</groupId>
+    <artifactId>pi4j-native</artifactId>
+    <version>1.1</version>
+    <classifier>raspberrypi-dynamic</classifier>
+    <type>so</type>
+</dependency>
+
 	</dependencies>
 
 </project>
