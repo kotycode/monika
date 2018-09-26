@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: jeden.jeden.App
+Main-Class: jeden.jeden.app
