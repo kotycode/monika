@@ -18,6 +18,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.1.0</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -41,8 +42,8 @@
 		<!-- https://mvnrepository.com/artifact/com.pi4j/pi4j-core -->
 		<dependency>
 			 <groupId>com.pi4j</groupId>
-    <artifactId>pi4j-core</artifactId>
-    <version>1.1</version>
+   			 <artifactId>pi4j-core</artifactId>
+   			 <version>1.1</version>
 		</dependency>
 	</dependencies>
 
