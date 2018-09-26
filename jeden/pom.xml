@@ -6,13 +6,18 @@
 	<artifactId>jeden</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Jeden</name>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+
 	<!-- Dodano z powodu bledu FAILED TO LOAD MAIN CLASS manifest -->
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -25,5 +30,20 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.pi4j/pi4j-core -->
+		<dependency>
+			<groupId>com.pi4j</groupId>
+			<artifactId>pi4j-core</artifactId>
+			<version>0.0.5</version>
+		</dependency>
+	</dependencies>
 
 </project>
