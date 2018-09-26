@@ -24,13 +24,12 @@
 					<target>1.8</target>
 					<archive>
 						<manifest>
-                        <addClasspath>true</addClasspath>
                         <!--<classpathPrefix>${pi.pi4j.Directory}/</classpathPrefix>-->
                         <mainClass>jeden.jeden.App</mainClass>
                     </manifest>
                     <manifestEntries>
                         <!-- Add the pi4j in runtime. -->
-                        <Class-Path>${opt.pi4j.Directory}/pi4j-core.jar</Class-Path>
+                        <Class-Path>${opt.pi4j.lib}/pi4j-core.jar</Class-Path>
                     </manifestEntries>
 					</archive>
 					<descriptorRefs>
