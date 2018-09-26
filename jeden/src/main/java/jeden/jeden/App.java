@@ -10,7 +10,7 @@ public class App {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		System.out.println("TEST JEDEeeeN JEDEN");
+		System.out.println("TEeeeST JEDEeeeN JEDEN");
 
 		// get GIPO controller
 		final GpioController gpio = GpioFactory.getInstance();
