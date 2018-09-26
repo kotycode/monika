@@ -20,7 +20,7 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.1.0</version>
 				<configuration>
-					<source>1.8</source>
+			<source>1.8</source>
 					<target>1.8</target>
 					<archive>
 						<manifest>
@@ -30,7 +30,7 @@
                     </manifest>
                     <manifestEntries>
                         <!-- Add the pi4j in runtime. -->
-                        <Class-Path>${pi.pi4j.Directory}/pi4j-core.jar</Class-Path>
+                        <Class-Path>${opt.pi4j.Directory}/pi4j-core.jar</Class-Path>
                     </manifestEntries>
 					</archive>
 				</configuration>
