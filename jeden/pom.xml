@@ -6,31 +6,56 @@
 	<artifactId>jeden</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Jeden</name>
-<parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.2.4.RELEASE</version>
-    </parent>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 
-  
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.pi4j</groupId>
-            <artifactId>pi4j-core</artifactId>
-            <version>1.0</version>
-        </dependency>
-    </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-</build>
+	<!-- Dodano z powodu bledu FAILED TO LOAD MAIN CLASS manifest -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+			<source>1.8</source>
+					<target>1.8</target>
+					<archive>
+						<manifest>
+                        <addClasspath>true</addClasspath>
+                        <!--<classpathPrefix>${pi.pi4j.Directory}/</classpathPrefix>-->
+                        <mainClass>jeden.jeden.App</mainClass>
+                    </manifest>
+                    <manifestEntries>
+                        <!-- Add the pi4j in runtime. -->
+                        <Class-Path>${opt.pi4j.Directory}/pi4j-core.jar</Class-Path>
+                    </manifestEntries>
+					</archive>
+					<descriptorRefs>
+ <descriptorRef>jar-with-dependencies</descriptorRef>
+ </descriptorRefs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		
+		<dependency> 
+<groupId>com.pi4j</groupId> 
+<artifactId>pi4j-core</artifactId> 
+<version>0.0.5</version> 
+<exclusions> <exclusion> 
+<groupId>com.pi4j</groupId> 
+<artifactId>pi4j-native</artifactId> 
+</exclusion> 
+</exclusions> 
+</dependency> 
+		
+		
+
+	</dependencies>
+
 </project>
