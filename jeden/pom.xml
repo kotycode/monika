@@ -18,7 +18,7 @@
 					<target>1.8</target>
 					<archive>
 						<manifest>
-							<mainClass>com.someclass.Main</mainClass>
+							<mainClass>jeden.jeden.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
