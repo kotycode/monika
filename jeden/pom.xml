@@ -6,12 +6,6 @@
 	<artifactId>jeden</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Jeden</name>
-	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
-
-
 	<!-- Dodano z powodu bledu FAILED TO LOAD MAIN CLASS manifest -->
 	<build>
 		<plugins>
@@ -23,9 +17,7 @@
 			<source>1.8</source>
 					<target>1.8</target>
 					<archive>
-						<manifest>
-                        <addClasspath>true</addClasspath>
-                        <!--<classpathPrefix>${pi.pi4j.Directory}/</classpathPrefix>-->
+						<manifest>                        <!--<classpathPrefix>${pi.pi4j.Directory}/</classpathPrefix>-->
                         <mainClass>jeden.jeden.App</mainClass>
                     </manifest>
                     <manifestEntries>
