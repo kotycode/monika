@@ -18,11 +18,11 @@ public class App {
 		// create the pin with parameter PinState.HIGH
 		// will instantly power up the pin
 		final GpioPinDigitalOutput pin02 = gpio.provisionDigitalOutputPin(
-				RaspiPin.GPIO_01, "PinLEED", PinState.HIGH);
+				RaspiPin.GPIO_10, "PinLEED", PinState.HIGH);
 		final GpioPinDigitalOutput pin03 = gpio.provisionDigitalOutputPin(
-				RaspiPin.GPIO_02, "PinNLED", PinState.HIGH);
+				RaspiPin.GPIO_09, "PinNLED", PinState.HIGH);
 		final GpioPinDigitalOutput pin04 = gpio.provisionDigitalOutputPin(
-				RaspiPin.GPIO_03, "PinLEDD", PinState.HIGH);
+				RaspiPin.GPIO_11, "PinLEDD", PinState.HIGH);
 		
 		System.out.println("Lights ON");
 
