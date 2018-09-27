@@ -62,6 +62,9 @@ public class App {
 		pin03.pulse(2000, true);
 		pin04.pulse(3000, true);
 
+		pin02.low();
+		pin03.low();
+		pin04.low();
 		// release the GPIO controller res
 		gpio.shutdown();
 	}
