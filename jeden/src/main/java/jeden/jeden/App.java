@@ -19,10 +19,6 @@ public class App {
 		// will instantly power up the pin
 		final GpioPinDigitalOutput pin02 = gpio.provisionDigitalOutputPin(
 				RaspiPin.GPIO_10, "PinLEED", PinState.HIGH);
-		final GpioPinDigitalOutput pin03 = gpio.provisionDigitalOutputPin(
-				RaspiPin.GPIO_09, "PinNLED", PinState.HIGH);
-		final GpioPinDigitalOutput pin04 = gpio.provisionDigitalOutputPin(
-				RaspiPin.GPIO_11, "PinLEDD", PinState.HIGH);
 		
 		System.out.println("Lights ON");
 
@@ -31,8 +27,6 @@ public class App {
 
 		// turn off GPIO /2/3/4
 		pin02.low();
-		pin03.low();
-		pin04.low();
 		System.out.println("End of light");
 
 		// wait 2 sec
@@ -42,29 +36,15 @@ public class App {
 		System.out.println("turn on light in sequences");
 		pin02.high();
 		Thread.sleep(700);
-		pin03.high();
-		Thread.sleep(800);
-		pin04.high();
 
-		// wait 1 sec
-		Thread.sleep(1000);
-
-		pin02.low();
-		pin03.low();
-		pin04.low();
-
-		// wait 1sec
-		Thread.sleep(1000);
 
 		// turn on GPIO /2/3/4 and then turn off
 		System.out.println("Light is on for 3 sec");
 		pin02.pulse(1000, true);
-		pin03.pulse(2000, true);
-		pin04.pulse(3000, true);
+
 
 		pin02.low();
-		pin03.low();
-		pin04.low();
+
 		// release the GPIO controller res
 		gpio.shutdown();
 	}
